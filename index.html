@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="principal">
+        <section id="section1">
+            <div id="logo">
+                <img src="img/escudo.png" width="5%" alt="escudo">
+
+            </div>
+            <div id="caj_escri">
+                <div id="parteA">
+                    <textarea name="" id="textarea" cols="30" rows="5" placeholder="Ingrese el texto aquí"></textarea>
+
+                </div>
+                <div id="parteB">
+                    <p id="solo">Solo letras minúsculas y sin acentos</p>
+                    <button class="boton colorA" onclick="encriptar()">Encriptar</button>
+                    <button class="boton colorB" onclick="desencriptar()">Desencriptar</button>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="section2">
+            <div id="caj_der">
+                <div id="contenido">
+                    <img src="img/Muñeco.svg" alt="" width="100%">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+            <div id="caj_der2">
+                <div id="contenido_des">
+                    <h2 id="men_encrip"></h2>
+                </div>
+                <div>
+                    <button onclick="copiar()" class="boton colorA">Copiar</button>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    function encriptar() {
+        var textarea = document.getElementById("textarea").value
+        document.getElementById('caj_der').style.display = 'none';
+        document.getElementById('caj_der2').style.display = 'block';
+        var cadena = ''
+        textarea = textarea.replace(/e/g, 'enter')
+        textarea = textarea.replace(/i/g, 'imes')
+        textarea = textarea.replace(/a/g, 'ai')
+        //textarea = textarea.replace(/[i\(ai+)]/g, 'imes')
+        textarea = textarea.replace(/o/g, 'ober')
+        textarea = textarea.replace(/u/g, 'ufat')
+        //alert(textarea)
+        document.getElementById("men_encrip").innerHTML = textarea;
+    }
+
+    function desencriptar() {
+        var textarea = document.getElementById("textarea").value
+        document.getElementById('caj_der').style.display = 'none';
+        document.getElementById('caj_der2').style.display = 'block';
+        textarea = textarea.replace(/enter/g, 'e')
+        textarea = textarea.replace(/ai/g, 'a')
+        textarea = textarea.replace(/ober/g, 'o')
+        textarea = textarea.replace(/ufat/g, 'u')
+        textarea = textarea.replace(/imes/g, 'i')
+        //alert(textarea)
+        document.getElementById("men_encrip").innerHTML = textarea;
+    }
+
+    function copiar() {
+        var texto = document.getElementById("men_encrip").textContent
+        navigator.clipboard.writeText(texto)
+            .then(() => {
+                console.log("Copiado")
+            })
+            .catch(() => {
+                console.log("error")
+            })
+
+    }
+</script>

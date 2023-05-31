@@ -1,0 +1,126 @@
+.colorA{
+    background-color: #0A3871;
+}
+.colorB{
+    background-color: rgba(163, 197, 251);
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+    background-color: rgba(163, 197, 251, 0.221);
+}
+#principal{
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+}
+#section1{
+    width: 70%;
+    float: left;
+    background-color: rgba(121, 188, 207, 0.29);
+    height: 100%;
+}
+#section2{
+    width: 30%;
+    float: left;
+    background-color: rgba(121, 188, 207, 0.29);
+    height: 100%;
+}
+#logo{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+#textarea{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    font-size: 30px;
+    resize: none;
+}
+#textarea:focus-visible{
+    outline: none;
+}
+#caj_escri{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    height: 80%;
+}
+.boton{
+    width: 49%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 17px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+}
+#solo{
+    font-size: 13px;
+    color: rgb(158, 157, 157);
+}
+#caj_der{
+    height: 95%;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+#caj_der2{
+    height: 95%;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    text-align: center;
+    display: none;
+    /*display: flex;
+    align-items: center;*/
+}
+#contenido{
+    text-align: center;
+    margin: 0 auto;
+}
+#parteA{
+    height: 80%;
+}
+#contenido_des{
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    height: 90%;
+}
+@media only screen and (max-width: 1000px) {
+    #section1{
+        width: 100%;
+        float: left;
+        background-color: rgba(121, 188, 207, 0.29);
+        height: 100%;
+    }
+    #section2{
+        width: 100%;
+        float: left;
+        background-color: rgba(121, 188, 207, 0.29);
+        height: 100%;
+    }
+    #caj_der{
+        height: 95%;
+        background-color: white;
+        border-radius: 20px;
+        margin-right: 5%;
+        margin-left: 5%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+  }
